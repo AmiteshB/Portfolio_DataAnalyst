@@ -223,10 +223,10 @@ characters so that it can be used to create graphs with correct labels.
 
 ``` r
 ## column for month
-CyclisticDataRaw <- CyclisticDataRaw %>% mutate(month = month(CyclisticDataRaw$started_at, label = TRUE))
+CyclisticDataRaw <- CyclisticDataRaw %>% mutate(month = month(CyclisticDataRaw$started_at))
 
 ## column for day of the week
-CyclisticDataRaw <- CyclisticDataRaw %>% mutate(day_of_week = wday(CyclisticDataRaw$started_at, label = TRUE))
+CyclisticDataRaw <- CyclisticDataRaw %>% mutate(day_of_week = wday(CyclisticDataRaw$started_at, week_start = 1))
 
 ## column for hour
 CyclisticDataRaw <- CyclisticDataRaw %>% mutate(hour = hour(CyclisticDataRaw$started_at))
@@ -252,8 +252,8 @@ glimpse((CyclisticDataRaw))
     ## $ end_lat            <dbl> 41.93000, 41.80983, 42.03974, 41.80983, 41.80983, 4…
     ## $ end_lng            <dbl> -87.64000, -87.59938, -87.69941, -87.59938, -87.599…
     ## $ member_casual      <chr> "member", "member", "casual", "member", "member", "…
-    ## $ month              <ord> Jan, Jan, Jan, Jan, Jan, Jan, Jan, Jan, Jan, Jan, J…
-    ## $ day_of_week        <ord> Sat, Tue, Mon, Sun, Thu, Tue, Sun, Wed, Wed, Fri, T…
+    ## $ month              <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
+    ## $ day_of_week        <dbl> 6, 2, 1, 7, 4, 2, 7, 3, 3, 5, 4, 2, 1, 2, 4, 1, 6, …
     ## $ hour               <int> 20, 15, 7, 10, 13, 7, 21, 10, 20, 16, 17, 17, 19, 2…
     ## $ trip_duration_mins <dbl> 10.850000, 8.483333, 13.233333, 8.766667, 15.316667…
 
@@ -266,8 +266,7 @@ correctly.
 unique(CyclisticDataRaw$month)
 ```
 
-    ##  [1] Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
-    ## 12 Levels: Jan < Feb < Mar < Apr < May < Jun < Jul < Aug < Sep < ... < Dec
+    ##  [1]  1  2  3  4  5  6  7  8  9 10 11 12
 
 It shows values from 1-12 which represent a month hence we can conclude
 that we have extracted them correctly. Let’s do the same for days.
@@ -276,8 +275,7 @@ that we have extracted them correctly. Let’s do the same for days.
 unique(CyclisticDataRaw$day_of_week)
 ```
 
-    ## [1] Sat Tue Mon Sun Thu Wed Fri
-    ## Levels: Sun < Mon < Tue < Wed < Thu < Fri < Sat
+    ## [1] 6 2 1 7 4 3 5
 
 Here we can see values from 1-7 for each day of the week so we can
 conclude that these values are also correct.
@@ -403,14 +401,14 @@ CyclisticData %>%
     ## # A tibble: 7 × 3
     ## # Groups:   User_Type [1]
     ##   User_Type Weekday Avg_Trip_Duration
-    ##   <chr>     <ord>               <dbl>
-    ## 1 casual    Sun                  32.9
-    ## 2 casual    Sat                  32.1
-    ## 3 casual    Mon                  27.7
-    ## 4 casual    Fri                  27.3
-    ## 5 casual    Tue                  25.1
-    ## 6 casual    Thu                  24.7
-    ## 7 casual    Wed                  24.3
+    ##   <chr>       <dbl>             <dbl>
+    ## 1 casual          7              32.9
+    ## 2 casual          6              32.1
+    ## 3 casual          1              27.7
+    ## 4 casual          5              27.3
+    ## 5 casual          2              25.1
+    ## 6 casual          4              24.7
+    ## 7 casual          3              24.3
 
 The data is arranged in descending order based on average trip duration.
 It shows that on day number 7 and 6 which is Sunday and Saturday
@@ -433,14 +431,14 @@ CyclisticData %>%
     ## # A tibble: 7 × 3
     ## # Groups:   User_Type [1]
     ##   User_Type Weekday Avg_Trip_Duration
-    ##   <chr>     <ord>               <dbl>
-    ## 1 member    Sun                  14.0
-    ## 2 member    Sat                  13.9
-    ## 3 member    Fri                  12.5
-    ## 4 member    Thu                  12.0
-    ## 5 member    Tue                  12.0
-    ## 6 member    Wed                  11.9
-    ## 7 member    Mon                  11.9
+    ##   <chr>       <dbl>             <dbl>
+    ## 1 member          7              14.0
+    ## 2 member          6              13.9
+    ## 3 member          5              12.5
+    ## 4 member          4              12.0
+    ## 5 member          2              12.0
+    ## 6 member          3              11.9
+    ## 7 member          1              11.9
 
 The data for members show a very consistent usage irrespective of the
 day of the week.
@@ -473,19 +471,19 @@ CyclisticData %>%
     ## # A tibble: 12 × 3
     ## # Groups:   User_Type [1]
     ##    User_Type Month Avg_Trip_Duration
-    ##    <chr>     <ord>             <dbl>
-    ##  1 casual    Aug                35.3
-    ##  2 casual    Jul                32.3
-    ##  3 casual    Jun                29.4
-    ##  4 casual    May                28.5
-    ##  5 casual    Apr                27.7
-    ##  6 casual    Sep                25.2
-    ##  7 casual    Feb                23.2
-    ##  8 casual    Jan                22.9
-    ##  9 casual    Oct                22.9
-    ## 10 casual    Mar                21.4
-    ## 11 casual    Dec                19.9
-    ## 12 casual    Nov                19.9
+    ##    <chr>     <dbl>             <dbl>
+    ##  1 casual        8              35.3
+    ##  2 casual        7              32.3
+    ##  3 casual        6              29.4
+    ##  4 casual        5              28.5
+    ##  5 casual        4              27.7
+    ##  6 casual        9              25.2
+    ##  7 casual        2              23.2
+    ##  8 casual        1              22.9
+    ##  9 casual       10              22.9
+    ## 10 casual        3              21.4
+    ## 11 casual       12              19.9
+    ## 12 casual       11              19.9
 
 This data indicates peak usage of cyclistic services between the months
 of June and August which also happens to be the peak tourist season.
@@ -517,19 +515,19 @@ CyclisticData %>%
     ## # A tibble: 12 × 3
     ## # Groups:   User_Type [1]
     ##    User_Type Month Avg_Trip_Duration
-    ##    <chr>     <ord>             <dbl>
-    ##  1 member    Aug                13.8
-    ##  2 member    Jul                13.7
-    ##  3 member    Jun                13.2
-    ##  4 member    Sep                13.1
-    ##  5 member    May                13.0
-    ##  6 member    Oct                12.2
-    ##  7 member    Apr                11.7
-    ##  8 member    Nov                11.6
-    ##  9 member    Dec                11.4
-    ## 10 member    Feb                10.7
-    ## 11 member    Mar                10.4
-    ## 12 member    Jan                10.4
+    ##    <chr>     <dbl>             <dbl>
+    ##  1 member        8              13.8
+    ##  2 member        7              13.7
+    ##  3 member        6              13.2
+    ##  4 member        9              13.1
+    ##  5 member        5              13.0
+    ##  6 member       10              12.2
+    ##  7 member        4              11.7
+    ##  8 member       11              11.6
+    ##  9 member       12              11.4
+    ## 10 member        2              10.7
+    ## 11 member        3              10.4
+    ## 12 member        1              10.4
 
 The data for members again shows a consistent usage of cyclistic
 services regardless of the month.
@@ -649,8 +647,33 @@ CyclisticData %>%
     ## `summarise()` has grouped output by 'hour'. You can override using the
     ## `.groups` argument.
 
-    ## # A tibble: 0 × 1
-    ## # ℹ 1 variable: hour <int>
+    ## # A tibble: 24 × 3
+    ##     hour casual member
+    ##    <int>  <int>  <int>
+    ##  1     0  15643  17114
+    ##  2     1   9195   8521
+    ##  3     2   5361   4911
+    ##  4     3   3399   3777
+    ##  5     4   3290   6071
+    ##  6     5   8638  30103
+    ##  7     6  25289  95491
+    ##  8     7  44541 177536
+    ##  9     8  55106 215077
+    ## 10     9  42464 121114
+    ## 11    10  45565  93093
+    ## 12    11  58750 112178
+    ## 13    12  71916 131808
+    ## 14    13  74377 130939
+    ## 15    14  79014 134051
+    ## 16    15  94452 178210
+    ## 17    16 120624 265066
+    ## 18    17 144662 324187
+    ## 19    18 124136 248427
+    ## 20    19  89890 170852
+    ## 21    20  64637 116952
+    ## 22    21  54044  89772
+    ## 23    22  46306  64598
+    ## 24    23  31097  38616
 
 As shown in the results, there is a significant difference in the number
 of rides between casual users and members during the morning and evening
@@ -671,8 +694,33 @@ CyclisticData %>%
     ## `summarise()` has grouped output by 'hour'. You can override using the
     ## `.groups` argument.
 
-    ## # A tibble: 0 × 1
-    ## # ℹ 1 variable: hour <int>
+    ## # A tibble: 24 × 3
+    ##     hour casual member
+    ##    <int>  <int>  <int>
+    ##  1     0  21235  18407
+    ##  2     1  14701  12639
+    ##  3     2   9084   7360
+    ##  4     3   4538   4157
+    ##  5     4   2678   2707
+    ##  6     5   2790   4036
+    ##  7     6   4852   9807
+    ##  8     7   8447  17037
+    ##  9     8  15576  29098
+    ## 10     9  27520  43776
+    ## 11    10  41029  55736
+    ## 12    11  51751  64169
+    ## 13    12  58831  68106
+    ## 14    13  62243  67761
+    ## 15    14  63694  67816
+    ## 16    15  64776  68493
+    ## 17    16  61829  66491
+    ## 18    17  54574  63693
+    ## 19    18  48008  59309
+    ## 20    19  37347  47076
+    ## 21    20  27258  34687
+    ## 22    21  23245  27968
+    ## 23    22  22037  23392
+    ## 24    23  18182  17802
 
 Here the number of trips between casual users and members are quite
 similar throughout the day.
