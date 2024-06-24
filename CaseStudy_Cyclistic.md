@@ -745,7 +745,7 @@ ggplot(CyclisticData, aes(x = month, y = trip_duration_mins, fill = member_casua
        fill = "User type")
 ```
 
-![](https://github.com/AmiteshB/CyclisticBikeShare_CaseStudy/blob/main/trip%20duration%20per%20month%20plot-1.png)<!-- -->
+![](trip%20duration%20per%20month%20plot-1.png)<!-- -->
 
 <br>
 
