@@ -734,6 +734,48 @@ fun during the weekend.
 
 <br>
 
+### Visuals to understand analysis
+
+``` r
+ggplot(CyclisticData, aes(x = month, y = trip_duration_mins, fill = member_casual)) +
+  stat_summary(fun = mean, geom = "bar", position = "dodge") +
+  labs(title = "Average trip duration per month", 
+       x = "Month", 
+       y = "Average trip duration", 
+       fill = "User type")
+```
+
+![](CaseStudy_Cyclistic_files/figure-gfm/trip%20duration%20per%20month%20plot-1.png)<!-- -->
+
+<br>
+
+``` r
+ggplot(CyclisticData, aes(x = day_of_week, y = trip_duration_mins, fill = member_casual)) +
+  stat_summary(fun = mean, geom = "bar", position = "dodge") +
+  labs(title = "Average trip duration per day", 
+       x = "Weekday", 
+       y = "Average trip duration", 
+       fill = "User type")
+```
+
+![](CaseStudy_Cyclistic_files/figure-gfm/trip%20duration%20per%20day%20plot-1.png)<!-- -->
+
+<br>
+
+``` r
+plot <- ggplot(CyclisticData, aes(x = hour, fill = member_casual)) + geom_bar(position = 'dodge') 
+
+plot + scale_x_continuous(breaks = seq(min(CyclisticData$hour), max(CyclisticData$hour), by = 2)) +
+  labs(title = "Trip count by hour", 
+       x = "Hour", 
+       y = "Total rides", 
+       fill = "User type")
+```
+
+![](CaseStudy_Cyclistic_files/figure-gfm/trip%20count%20by%20hour%20plot-1.png)<!-- -->
+
+<br>
+
 ### Analysis Summary
 
 **Data-driven insights**
