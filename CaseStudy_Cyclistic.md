@@ -745,7 +745,7 @@ ggplot(CyclisticData, aes(x = month, y = trip_duration_mins, fill = member_casua
        fill = "User type")
 ```
 
-![](CaseStudy_Cyclistic_files/figure-gfm/trip%20duration%20per%20month%20plot-1.png)<!-- -->
+![](https://github.com/AmiteshB/CyclisticBikeShare_CaseStudy/blob/main/trip%20duration%20per%20month%20plot-1.png)<!-- -->
 
 <br>
 
@@ -758,7 +758,7 @@ ggplot(CyclisticData, aes(x = day_of_week, y = trip_duration_mins, fill = member
        fill = "User type")
 ```
 
-![](CaseStudy_Cyclistic_files/figure-gfm/trip%20duration%20per%20day%20plot-1.png)<!-- -->
+![](https://github.com/AmiteshB/CyclisticBikeShare_CaseStudy/blob/main/trip%20duration%20per%20day%20plot-1.png)<!-- -->
 
 <br>
 
@@ -772,7 +772,7 @@ plot + scale_x_continuous(breaks = seq(min(CyclisticData$hour), max(CyclisticDat
        fill = "User type")
 ```
 
-![](CaseStudy_Cyclistic_files/figure-gfm/trip%20count%20by%20hour%20plot-1.png)<!-- -->
+![](https://github.com/AmiteshB/CyclisticBikeShare_CaseStudy/blob/main/trip%20count%20by%20hour%20plot-1.png)<!-- -->
 
 <br>
 
