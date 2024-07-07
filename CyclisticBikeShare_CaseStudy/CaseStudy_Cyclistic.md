@@ -38,7 +38,7 @@ approval from the executive team.
 - Dataset Source: Data was provided through a repository held online.
 - Data Context: The data was collected to analyze it for potential
   insights regarding growth of the company.
-- Data Documentation - No documentation was provided about the data
+- Data Documentation: No documentation was provided about the data
 
 #### Initial Data Exploration:
 
