@@ -49,3 +49,6 @@ Next I grouped the data by days of the week and found out that Casual customers 
 Now after analysing the months, I found out that <b>August and July</b> are the busiest months for the company and this is when the company sees the most rides. These months happen to be the <b>peak tourist season</b> in chicago which seems to be the reason for extra traffic at this time.
 
 Upon analysing data on an hourly basis, I found that the total number of trips consistently increase for both casual customers and members as the day proceeds but we see a <ins>sudden spike</ins> in number of trips for members during the <ins>morning</ins> rush hour from <b>7-8 am</b> which is also the time most people leave for work. After this the total number of trips start to decline a little until we reach lunch time and soon enough we see the <ins>peak</ins> number of rides for a day around <ins>evening</ins> from <b>4pm to 6pm</b> which is when I assume people start to leave their workplaces.
+
+### Visualising the Data
+![](trip_count_hour.png)
