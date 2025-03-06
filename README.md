@@ -26,3 +26,6 @@ The director of marketing has a hypothesis that in order to grow their revenue t
 <b>Stakeholder Expectations</b>
 - Executive Team: Insights that are backed by real world data and can help to grow the company.
 - Director of marketing: Data driven evidence to back up her hypothesis and recommendations.
+
+### Data Preperation
+The data provided for this case study is Cyclistic's historical trip data and is made available by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement).
