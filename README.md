@@ -52,5 +52,7 @@ Upon analysing data on an hourly basis, I found that the total number of trips c
 
 ### Visualising the Data
 ![trip_count_hour.png](https://github.com/AmiteshB/Portfolio_DataAnalyst/blob/main/CyclisticBikeShare_CaseStudy/trip_count_hour.png, "Total Trips by Hour and Membership Type")
+
 ![trip_duration_day.png](https://github.com/AmiteshB/Portfolio_DataAnalyst/blob/main/CyclisticBikeShare_CaseStudy/trip_duration_day.png, "Average Trip Duration by Weekdays and Membership Type")
+
 ![trip_duration_month.png](https://github.com/AmiteshB/Portfolio_DataAnalyst/blob/main/CyclisticBikeShare_CaseStudy/trip_duration_month.png, "Average Trip Duration by Month and Membership Type")
