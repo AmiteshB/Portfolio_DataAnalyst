@@ -51,7 +51,7 @@ Now after analysing the months, I found out that <b>August and July</b> are the 
 Upon analysing data on an hourly basis, I found that the total number of trips consistently increase for both casual customers and members as the day proceeds but we see a <ins>sudden spike</ins> in number of trips for members during the <ins>morning</ins> rush hour from <b>7-8 am</b> which is also the time most people leave for work. After this the total number of trips start to decline a little until we reach lunch time and soon enough we see the <ins>peak</ins> number of rides for a day around <ins>evening</ins> from <b>4pm to 6pm</b> which is when I assume people start to leave their workplaces.
 
 ### Visualising the Data
-![trip_count_hour.png](https://github.com/AmiteshB/Portfolio_DataAnalyst/blob/main/CyclisticBikeShare_CaseStudy/trip_count_hour.png, "Total Trips by Hour and Membership Type")
+![trip_count_hour.png](https://github.com/AmiteshB/Portfolio_DataAnalyst/blob/main/CyclisticBikeShare_CaseStudy/trip_count_hour.png)
 
 ![trip_duration_day.png](https://github.com/AmiteshB/Portfolio_DataAnalyst/blob/main/CyclisticBikeShare_CaseStudy/trip_duration_day.png, "Average Trip Duration by Weekdays and Membership Type")
 
