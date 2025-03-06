@@ -56,3 +56,57 @@ Upon analysing data on an hourly basis, I found that the total number of trips c
 ![trip_duration_day.png](https://github.com/AmiteshB/Portfolio_DataAnalyst/blob/main/CyclisticBikeShare_CaseStudy/trip_duration_day.png)
 
 ![trip_duration_month.png](https://github.com/AmiteshB/Portfolio_DataAnalyst/blob/main/CyclisticBikeShare_CaseStudy/trip_duration_month.png)
+
+### Analysis Summary
+
+##### Data-driven insights
+
+<b>Casuals</b>
+
+- Take rides for longer duration on an average than members.
+- Rent more bikes during afternoon and evening.
+- Rent bikes for even longer duration during weekends.
+- Most active during the summer season.
+- Least active during winter season.
+
+<b>Members</b>
+
+- Take more total number of rides than casuals but have lower average ride duration.
+- Rent bikes more during morning and evening rush hours.
+- Rent more bikes during weekdays and less on weekends.
+- Have no favorite time period. They are consistently active through out the year.
+
+##### Speculated insights
+
+Using the above mentioned data driven insights, we can speculate qualitative insights about the behaviour of each of the user type as mentioned below:
+
+<b>Casuals</b>
+
+- Use bikes mostly for leisure activities.
+- Don’t use bikes regularly but keep it as an alternative transport.
+- Don’t have the requirements of the perks that the membership offers.
+
+<b>Members</b>
+
+- Use bikes to commute to work regularly.
+- Use bikes as a main source of transport for daily commuting.
+- Have enough regular usage to justify paying for an annual membership.
+
+### Acting on insights
+1. Collect additional data:
+Building an effective marketing campaign requires time, effort and money and after putting in all of the work, we don’t want it to perform poorly. Keeping this in mind, additional quantitative and qualitative data should be collected to give us an even better understanding about the needs of our users and also provide us more confidence regarding our marking strategies by confirming our current speculations.
+
+To understand different users’ behaviour, we need qualitative data which can be gathered by surveying our customers and finding out about things such as the features that they like the most and the features that want to be improved or added, their main purpose of using bikes and provide them a list of external factors to choose from that might affect their decision about using a bike.
+
+To gain further quantitative insights, we need more data variables such as age, gender, financial data, availability of bikes.
+
+2. Act on current insights:
+These are the recommended steps to move forward with based on the insights gained from currently available data. Moving forward with these strategies have some risk involved and might not guarantee 100% success.
+
+- Dynamic pricing: Instead of a single static price throughout the day, introduce dynamic pricing where the price depends on the demand. This will make the prices higher during peak hours. Relieve users with membership from this dynamic pricing model so that there is a clear monetary benefit of buying a membership.
+
+- New membership models: There are only two pricing models as of now which consists of single day passes and annual memberships. Provide users with more options by adding new subscriptions such as monthly subscriptions or a pricing model where users pay depending on the duration of rental or distance traveled. This will help the users who use bikes frequently but not regularly enough to justify paying for an annual membership.
+
+- Additional membership benefits: Provide more benefits of buying a membership such as a certain number of free rides per month and reserved rides at docking stations. Casual users tend to ride for longer hence new benefits could be added which would incentivise longer rides.
+
+- More user engagement: New features which would display metrics such as calories burnt and carbon emissions saved can be added to the cyclistic app. This will help users have a sense of achievement after finishing a ride and will encourage and motivate them to ride more.
