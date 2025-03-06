@@ -93,14 +93,14 @@ Using the above mentioned data driven insights, we can speculate qualitative ins
 - Have enough regular usage to justify paying for an annual membership.
 
 ### Acting on insights
-1. Collect additional data:
+<b>Collect additional data:</b>
 Building an effective marketing campaign requires time, effort and money and after putting in all of the work, we don’t want it to perform poorly. Keeping this in mind, additional quantitative and qualitative data should be collected to give us an even better understanding about the needs of our users and also provide us more confidence regarding our marking strategies by confirming our current speculations.
 
 To understand different users’ behaviour, we need qualitative data which can be gathered by surveying our customers and finding out about things such as the features that they like the most and the features that want to be improved or added, their main purpose of using bikes and provide them a list of external factors to choose from that might affect their decision about using a bike.
 
 To gain further quantitative insights, we need more data variables such as age, gender, financial data, availability of bikes.
 
-2. Act on current insights:
+<b>Act on current insights:</b>
 These are the recommended steps to move forward with based on the insights gained from currently available data. Moving forward with these strategies have some risk involved and might not guarantee 100% success.
 
 - Dynamic pricing: Instead of a single static price throughout the day, introduce dynamic pricing where the price depends on the demand. This will make the prices higher during peak hours. Relieve users with membership from this dynamic pricing model so that there is a clear monetary benefit of buying a membership.
