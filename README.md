@@ -20,7 +20,7 @@ Rather than creating a marketing campaign that targets all-new customers, Moreno
 there is a solid opportunity to convert casual riders into members. She notes that casual riders
 are already aware of the Cyclistic program and have chosen Cyclistic for their mobility needs.
  
-### Deliverable: Business Task
+### Business Task
 The director of marketing has a hypothesis that in order to grow their revenue they need people to purchase more annual memberships and for this to happen, they want to convert more casual customers to annual members. My team needs to figure out how casual and annual members use Cyclistic bikes differently so that we can create a new strategy for marketing. These insights need to be backed by data in order to get approval from the executive team.
 
 <b>Stakeholder Expectations</b>
@@ -29,3 +29,19 @@ The director of marketing has a hypothesis that in order to grow their revenue t
 
 ### Data Preperation
 The data provided for this case study is Cyclistic's historical trip data and is made available by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement).
+
+<b>Visual Studio Code</b> IDE was used along with <b>Python</b> programming language to work on the data.
+
+The provided data covers the time period from Jaunary 2023 to December 2023.
+
+The data was provided in the form of 12 csv files where each csv file represented each month from January to December. All the files had to be combined into a singular dataframe to perform analysis efficiently. The size of the final dataframe came out to be over <b>5 Million rows and 13 Columns</b>. More columns were created later on to help with analysis.
+
+### Processing the Data
+The processing phase includes cleaning the data of any null and duplicate values. Upon investigating, almost <b>1.4 Million</b> records came out to have one or more null values. This accounts for almost 25% of the size of our dataset. Most of the null data was in the form of station names and station ids. Since I was not using station names and ids in my analysis and all the other columns which were going to be used in the analysis had no null values I left the data as it is. Upon looking for duplicate values, no duplicated values were found in the dataset.
+
+After cleaning the data, I used the starting date and time of each trip from the started_at column to extract the month, day and hour values into seperate columns. Then I used the started_at and ended_at columns to find the duration for each trip and stored it in a new duration column. This data will help us analyse how the rental service is used throughout different months, days of the week and at different hours of the day.
+
+### Analysing the Data
+In the analysis process I first looked at how long do people ride bikes for between casuals and members and it was a surprising discovery to find out that <u>Casual customers</u> ride for more than <u>2 times</u> longer duration than members with Casual customers having an average trip duration of <b>28.25 mins</b> while members having an average trip duration of <b>12.53 mins</b>.
+
+Next I grouped the data by days of the week and found out that Casual customers tend to ride bikes for the longest duration on weekends which is Saturday and Sunday whereas Members have almost similar ride duration throughout the week.
